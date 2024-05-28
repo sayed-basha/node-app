@@ -6,6 +6,7 @@ pipeline {
             steps {
                 script {
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
+                        sh "docker rmi -f $(docker images -q)"
                         sh "docker build -t basha999/node-app:v$BUILD_NUMBER ."
                     }
                 }
