@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: shark-app
-        image: basha999/node-app:v6
+        image: basha999/node-app:v9
         ports:
         - containerPort: 8080
 
